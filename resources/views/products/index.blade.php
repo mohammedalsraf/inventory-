@@ -42,8 +42,7 @@
                 <div class="col">
                     <select class="form-control bg-warning" data-live-search="true" name="cat">
                         <option value="">-- قم باختيار صنف</option>
-                        <option value="">-- قم باختيار صنف</option>
-                        <option value="">-- قم باختيار صنف</option>
+                      
                         @foreach ($cat as $cat)
                         <option value="{{ $cat->id }}">{{ $cat->cat_name }}</option>
                         @endforeach
