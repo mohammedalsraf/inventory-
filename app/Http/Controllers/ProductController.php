@@ -57,13 +57,19 @@ class ProductController extends Controller
             'product_name'=> 'required',
             'barcode' => 'required|unique:products',
             'category_id'=> 'required',
+            'notes' => 'nullable',
             // 'quantity' => 'required|integer',
-            'notes'=> 'required',
+            
        
         ]);
+        
         $input = $request->all();
+       
         Product::create($input);
         return redirect()->route('products.index')->with('success','تم اضافة المادة بنجاح');
+
+       
+        
 
     }
 
@@ -101,7 +107,7 @@ class ProductController extends Controller
             'product_name'=> 'required',
             'barcode'=> 'required',
             'category_id'=> 'required',
-            'notes'=> 'required',
+             'notes' => 'nullable',
             // 'image' => 'required|image|mimes:jpeg,jpg,png|max:2048'
 
         ]);
@@ -128,12 +134,13 @@ class ProductController extends Controller
     public function search(Request $request)
     {
         $keyword = $request->input('keyword');
+        $cat=Category::get();
         if($keyword!=""){
             $products = Product::where('product_name', 'LIKE', "%$keyword%")
             ->orWhere('barcode', 'LIKE', "%$keyword%")->latest()
             ->paginate(7);
     
-        return view('products.index', compact('products'));
+        return view('products.index', compact('products','cat'));
     
         }else{
             return redirect()->route('products.index');
@@ -190,6 +197,8 @@ class ProductController extends Controller
 
 
     }
+
+   
 
     
 }

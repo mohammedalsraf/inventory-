@@ -34,6 +34,12 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'quantity'=> 'required',
+         
+    
+       
+        ]);
         $transaction = new Transaction([
             'item_id' => $request->item_id,
             'quantity' => $request->quantity,
@@ -107,7 +113,7 @@ class TransactionController extends Controller
 
     {
         $myid = $id;
-        $precord = Transaction::where('item_id', $myid)->get(); // Retrieve all records where id = myid
+        $precord = Transaction::where('item_id', $myid)->paginate(10); // Retrieve all records where id = myid
         // dd($precord);
     
         return view('transaction.precord', compact('myid', 'product_name', 'precord'));
@@ -164,4 +170,11 @@ public function getTotalOutgoing()
 
     return $totalOutgoing;
 }
+
+ public function recordrep($myid){
+    $precord = Transaction::where('item_id', $myid)->get();
+    return view('products.recordrep',compact('precord'));
+
+        
+    }
 }

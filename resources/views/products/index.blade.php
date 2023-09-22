@@ -17,13 +17,14 @@
   </form></div>
 </div>
 <div id="content" class="p-4 p-md-5 pt-5 text-right">
-  @if ($msg=Session::get('success'))
-<div class="alert alert-success" role="alert">
-  {{$msg}}
-</div>
-@endif
+
 
 <div class="container ">
+  @if ($msg=Session::get('success'))
+  <div class="alert alert-success" role="alert">
+    {{$msg}}
+  </div>
+  @endif
  
   <div class="row">
     <div class="col-1">
@@ -39,17 +40,17 @@
           @csrf
           @method('post')
             <div class="row">
-                <div class="col">
-                    <select class="form-control bg-warning" data-live-search="true" name="cat">
-                        <option value="">-- قم باختيار صنف</option>
+                <div class="col" >
+                    <select class="form-control bg-warning" data-live-search="true" name="cat" style="font-size: 14px;font-weight: bold ;color: black">
+                        <option  style="font-size: 14px;font-weight: bold" value="">-- قم باختيار صنف</option>
                       
                         @foreach ($cat as $cat)
-                        <option value="{{ $cat->id }}">{{ $cat->cat_name }}</option>
+                        <option  style="font-size: 14px;font-weight: bold" value="{{ $cat->id }}">{{ $cat->cat_name }}</option>
                         @endforeach
                     </select>
                 </div>
-                <div class="col">
-                    <input class="btn btn-primary" type="submit" value="طباعة تقرير صنف" style="margin-right: 10px;"  >
+                <div class="col" style="margin-left: 30px;">
+                    <input class="btn btn-primary" type="submit" value="طباعة تقرير صنف"   >
                 </div>
             </div>
         </form>
@@ -107,7 +108,7 @@
                   <form action="{{route('products.destroy',$item->id)}}" method="post">
                     @csrf
                    @method('delete')
-                 <input  class="form-controler btn btn-danger btn" type="submit" value="حذف">
+                 <input  class="form-controler btn btn-danger btn" type="submit" value="حذف" onclick="return confirm('هل انت متاكد انك تريد حذف هذا العنصر ');">
                  </form> 
                  </div>
                 

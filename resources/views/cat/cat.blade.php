@@ -29,7 +29,7 @@
                
                <div class="mb-3">
                  <label for="input2" class="form-label">اسم الصنف</label>
-                 <input type="text" class="form-control" id="input2" name="cat_name"  >
+                 <input type="text" class="form-control input-text" id="input2" name="cat_name"  >
                </div>
              
              
@@ -59,9 +59,9 @@
  
   </div>
 {{-- ########################## --}}
- <div class="mt-3 mr-3">
-    <table class="table table-primary  table-hover table-bordered ">
-        <thead>
+ <div class="mt-3 mr-3 ">
+  <table class="table   table-hover table-bordered  table-striped table-sm ">
+    <thead class="thead-dark">
           <tr>
            
             <th scope="col">ID</th>
@@ -94,7 +94,7 @@
                       <form action="{{route('cat.destroy',$item->id)}}" method="post">
                         @csrf
                        @method('delete')
-                     <input  class="form-controler btn btn-danger btn-sm" type="submit" value="حذف">
+                     <input  class="form-controler btn btn-danger btn-sm" type="submit" value="حذف" onclick="return doubleConfirm();">
                      </form> 
                      </div>
                          

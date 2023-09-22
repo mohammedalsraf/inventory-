@@ -8,6 +8,8 @@
 
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/my.css') }}">
+
     <link rel="stylesheet" href="../sidebar-04/css/style.css">
     <style>
         .body{
@@ -40,6 +42,7 @@
     <div id="content" style="background-color: rgb(232, 243, 255)">
         @yield('content')
     </div>
+   
 
     <!-- Include your JavaScript files here -->
 </body>

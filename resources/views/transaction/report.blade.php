@@ -11,8 +11,8 @@
         {{-- ########################## --}}
         <div class="mt-3 mr-3">
         
-            <table class="table table-primary  table-hover table-bordered ">
-                <thead>
+            <table class="table   table-hover table-bordered  table-striped table-sm ">
+                <thead class="thead-dark">
                     <tr>
                         <th scope="col">اسم المادة</th>
                         <th scope="col">اجمالي الداخل</th>

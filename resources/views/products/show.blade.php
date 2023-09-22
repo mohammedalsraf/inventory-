@@ -6,9 +6,10 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title">{{' المعرف :  '.$product->id}}</h2>
+                      
                         <h3 class="card-text">{{'اسم المادة : '.$product->product_name}}</h3>
                         <h3 class="card-text">{{'الباركود : '.$product->barcode}}</h3>
+                        <h3 class="card-text">{{'الكمية : '.$product->quantity}}</h3>
                         <h3 class="card-text">{{' الملاحضات : '.$product->notes}}</h3>
                        
         

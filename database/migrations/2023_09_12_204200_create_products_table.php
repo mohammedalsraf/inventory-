@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->integer('quantity')->default(0);
             
-            $table->string('notes'); // Foreign key
+            $table->text('notes')->nullable();
             $table->timestamps();
     
             $table->foreign('category_id')->references('id')->on('categories');

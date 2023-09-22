@@ -23,16 +23,16 @@
              
                
                <div class="mb-3" >
-                 <label for="input2" class="form-label">اسم المادة</label>
-                 <input type="text" class="form-control" id="input2" name="product_name"  >
+                 <label for="input2" class="form-label ">اسم المادة</label>
+                 <input type="text" class="form-control input-text" id="input2" name="product_name"  >
                </div>
                <div class="mb-3">
                  <label for="input2" class="form-label">الباركود</label>
-                 <input type="text" class="form-control" id="input2" name="barcode"  >
+                 <input type="text" class="form-control input-text" id="input2" name="barcode"  >
                </div>
                <div class="mb-3">
                  <label for="input2" class="form-label">الصنف</label>
-                 <select class="form-control" data-live-search="true" name="category_id" >
+                 <select class="form-control input-text" data-live-search="true" name="category_id" >
                   @foreach ($cat as $cat )
                   <option value="{{$cat->id}}">{{$cat->cat_name}}</option>
                     
@@ -43,7 +43,7 @@
                </div>
                <div class="mb-3">
                 <label for="input2" class="form-label">الملاحضات</label>
-                <input type="text" class="form-control" id="input2" name="notes"  >
+                <input type="text" class="form-control input-text" id="input2" name="notes"  >
               </div>
               <div class="my-2"> <button type="submit" class="btn btn-primary ">حفظ</button></div>
             

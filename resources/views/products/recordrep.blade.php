@@ -20,27 +20,33 @@
   </head>
   <body onload="print()">
     <div class="container ">
-      <p class="text-center " style="font-size: 25px">تقرير الكميات في المخزن حسب الصنف </p>
+      <p class="text-center " style="font-size: 25px">تقرير الكميات في المخزن </p>
       <p class="text-center " style="font-size: 25px color:black">  <?php echo date("d-m-Y"); ?> </p>
     <table class="table   table-hover table-bordered  table-striped table-sm ">
       <thead class="thead-dark  ">
          
         <tr class="text-center font-weight-bold">
-          <th scope="col" >الملاحضات</th>
-          <th scope="col" >الكمية</th>
-          <th scope="col">الباركود</th>
-          <th scope="col" >اسم المنتج</th>
+            <th scope="col">التاريخ</th>
+            <th scope="col">الكمية</th>
+            <th scope="col">نوع الحركة</th>
+            <th scope="col">ID</th>
+           
+            
+            
         
         </tr>
       </thead>
    
               <tbody>
-                @foreach ($products as $item )
+                @foreach ($precord as $item )
                 <tr class="text-center">
-                  <td >{{$item->notes}}</td>
-                  <td>{{$item->quantity}}</td>
-                  <td>{{$item->barcode}}</td>
-                  <td>{{$item->product_name}}</td>
+                    <td>{{ $item->created_at }}</td>
+                    <td>{{ $item->quantity }}</td>
+                    <td>{{ $item->type }}</td>
+                    <td>{{ $item->item_id }}</td>
+                    
+                    
+                   
                  
                 </tr>
                   

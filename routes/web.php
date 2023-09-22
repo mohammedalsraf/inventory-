@@ -29,6 +29,7 @@ Route::get('report', [TransactionController::class,'report'])->name('report');
 Route::get('/search', [ProductController::class, 'search'])->name('search');
 Route::get('/pdfn', [ProductController::class, 'pdfn'])->name('pdfn');
 Route::post('/catq', [ProductController::class, 'catq'])->name('catq');
+Route::get('/recordrep/{id}', [TransactionController::class, 'recordrep'])->name('recordrep');
 
 
 

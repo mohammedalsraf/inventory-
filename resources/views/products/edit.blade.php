@@ -24,15 +24,15 @@
                
                <div class="mb-3">
                  <label for="input2" class="form-label">اسم المادة</label>
-                 <input type="text" class="form-control" id="input2" name="product_name" value="{{$product->product_name}}" >
+                 <input type="text" class="form-control input-text" id="input2" name="product_name" value="{{$product->product_name}}" >
                </div>
                <div class="mb-3">
                  <label for="input2" class="form-label">الباركود</label>
-                 <input type="text" class="form-control" id="input2" name="barcode" value="{{$product->barcode}}" readonly >
+                 <input type="text" class="form-control input-text" id="input2" name="barcode" value="{{$product->barcode}}" readonly >
                </div>
                <div class="mb-3">
                  <label for="input2" class="form-label">الصنف</label>
-                 <select class="form-control" data-live-search="true" name="category_id" >
+                 <select class="form-control input-text" data-live-search="true" name="category_id" >
                   @foreach ($cat as $cat )
                   <option value="{{$cat->id}}" {{$product->category_id==$cat->id ? 'selected' : ''}}>{{$cat->cat_name }}</option>
                     
@@ -43,7 +43,7 @@
                </div>
                <div class="mb-3">
                 <label for="input2" class="form-label">الملاحضات</label>
-                <input type="text" class="form-control" id="input2" name="notes" value="{{$product->notes}}"  >
+                <input type="text" class="form-control input-text" id="input2" name="notes" value="{{$product->notes}}"  >
               </div>
               <div class="my-2"> <button type="submit" class="btn btn-primary ">حفظ</button></div>
             
