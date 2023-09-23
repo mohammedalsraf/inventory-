@@ -171,9 +171,9 @@ public function getTotalOutgoing()
     return $totalOutgoing;
 }
 
- public function recordrep($myid){
+ public function recordrep($myid,$product_name){
     $precord = Transaction::where('item_id', $myid)->get();
-    return view('products.recordrep',compact('precord'));
+    return view('products.recordrep',compact('precord','product_name'));
 
         
     }

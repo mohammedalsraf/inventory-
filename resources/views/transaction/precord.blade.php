@@ -17,7 +17,7 @@
             </div>
         
             <div class="col-1 mr-4">
-                <a class="btn btn-primary" style="width: 180px" href="{{ route('recordrep',$myid) }}" target='_blank'>طباعة تقرير  حركة مادة</a>
+                <a class="btn btn-primary" style="width: 180px" href="{{ route('recordrep',['id'=>$myid, 'product_name'=>$product_name]) }}" target='_blank'>طباعة تقرير  حركة مادة</a>
             </div>
             </div>
           <table class="table   table-hover table-bordered  table-striped table-sm ">

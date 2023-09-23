@@ -20,7 +20,7 @@
   </head>
   <body onload="print()">
     <div class="container ">
-      <p class="text-center " style="font-size: 25px">تقرير الكميات في المخزن </p>
+      <p class="text-center " style="font-size: 25px">تقرير حركة المادة :  {{$product_name}} </p>
       <p class="text-center " style="font-size: 25px color:black">  <?php echo date("d-m-Y"); ?> </p>
     <table class="table   table-hover table-bordered  table-striped table-sm ">
       <thead class="thead-dark  ">

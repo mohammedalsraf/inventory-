@@ -1,6 +1,9 @@
 @extends('cat.layout')
 @section('content')
-<div id="content" class="p-4 p-md-5 pt-5 text-right">
+<div class="col-1 mt-3  " style="margin-right: 260px ;margin-bottom: 5px">
+    <a class="btn btn-primary " href="{{ route('products.index') }}" style="width: 100px;">العودة </a>
+  </div>
+<div id="content" class=" text-right">
     @if ($msg = Session::get('success'))
     <div class="alert alert-success" role="alert">
         {{ $msg }}

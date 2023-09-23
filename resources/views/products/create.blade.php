@@ -1,6 +1,9 @@
 @extends('products.layout')
 @section('content')
-<div id="content" class="p-4 p-md-5 pt-5" >
+<div class="col-1 mt-5  " style="margin-right: 233px ;margin-bottom: 5px">
+  <a class="btn btn-primary " href="{{ route('products.index') }}" style="width: 100px;">العودة </a>
+</div>
+<div id="content" class="" >
 
   
  <div class="container" >
@@ -20,6 +23,11 @@
                      </ul>
                  </div>
              @endif
+             <div class="mb-2 " >
+              
+          
+              
+              </div>
              
                
                <div class="mb-3" >
