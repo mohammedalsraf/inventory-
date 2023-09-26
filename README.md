@@ -1,4 +1,4 @@
-![alt text](https://github.com/mohammedalsraf/leave-management/blob/main/1.JPG)
+![alt text](https://github.com/mohammedalsraf/inventory-/tree/main/pic/1.JPG)
 ![alt text](https://github.com/mohammedalsraf/leave-management/blob/main/2.JPG)
 ![alt text](https://github.com/mohammedalsraf/leave-management/blob/main/3.JPG)
 ![alt text](https://github.com/mohammedalsraf/leave-management/blob/main/4.JPG)
