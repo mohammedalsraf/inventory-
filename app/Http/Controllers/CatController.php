@@ -37,7 +37,7 @@ class CatController extends Controller
         ]);
         $input = $request->all();
         Category::create($input);
-        return redirect()->route('cat.create')->with('success','تم اضافة المادة بنجاح');
+        return redirect()->route('cat.create')->with('success','تم اضافة الصنف بنجاح');
     }
 
     /**

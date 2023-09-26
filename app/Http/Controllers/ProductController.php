@@ -19,6 +19,10 @@ use ArPHP\I18N\Arabic;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
     /**
      * Display a listing of the resource.
@@ -196,6 +200,11 @@ class ProductController extends Controller
 
 
 
+    }
+
+    public function about(){
+
+        return view('products.about');
     }
 
    

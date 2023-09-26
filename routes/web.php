@@ -30,8 +30,15 @@ Route::get('/search', [ProductController::class, 'search'])->name('search');
 Route::get('/pdfn', [ProductController::class, 'pdfn'])->name('pdfn');
 Route::post('/catq', [ProductController::class, 'catq'])->name('catq');
 Route::get('/recordrep/{id}/{product_name}', [TransactionController::class, 'recordrep'])->name('recordrep');
+Route::get('/about', [ProductController::class, 'about'])->name('about');
 
 
 
 
 
+
+Auth::routes();
+
+Route::get('/home',function(){
+    return redirect()->route('products.index');
+} )->name('home');

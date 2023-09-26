@@ -41,8 +41,8 @@
           @method('post')
             <div class="row">
                 <div class="col" >
-                    <select class="form-control bg-warning" data-live-search="true" name="cat" style="font-size: 14px;font-weight: bold ;color: black">
-                        <option  style="font-size: 14px;font-weight: bold" value="">-- قم باختيار صنف</option>
+                    <select class="form-control bg-warning" data-live-search="true" name="cat" style="font-size: 12px;font-weight: bold ;color: black">
+                        <option  style="font-size: 12px;font-weight: bold" value="">-- قم باختيار صنف</option>
                       
                         @foreach ($cat as $cat)
                         <option  style="font-size: 14px;font-weight: bold" value="{{ $cat->id }}">{{ $cat->cat_name }}</option>
